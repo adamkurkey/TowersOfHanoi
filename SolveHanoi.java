@@ -26,14 +26,14 @@ public class SolveHanoi {
 		        if (numDisks == 1) {
 		            System.out.println("Move disk 1 from " + beginTower + " to " + endTower);
 		        } else {
-		        	// recursive case. Move n-1 disks from the beginTower to the temporaryTower
+		        	// recursive case. Move number of disks minus 1 from the beginTower to the temporaryTower
 		        	// using endTower as middle man
 		            towersOfHanoi(numDisks - 1, beginTower, temporaryTower, endTower);
 		            
 		            // Move the largest disk from the beginTower to the endTower
 		            System.out.println("Move disk " + numDisks + " from " + beginTower + " to " + endTower);
 		            
-		            // Move the n-1 disks from the temporaryTower to the endTower 
+		            // Move number of disks minus 1 from the temporaryTower to the endTower 
 		            // using beginTower as middle man
 		            towersOfHanoi(numDisks - 1, temporaryTower, endTower, beginTower);
 		        } // end else
